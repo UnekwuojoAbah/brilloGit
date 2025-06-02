@@ -11,3 +11,9 @@ Host github-brillo-ikena
     User git
     IdentityFile ~/.ssh/id_ed25519_brillo
     IdentitiesOnly yes
+
+
+
+nano ~/.ssh/config
+
+nano .git/config 
