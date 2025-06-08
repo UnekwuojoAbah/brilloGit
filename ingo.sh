@@ -45,6 +45,32 @@ BRILLO EVAL CONTENT git CONFIG CONTENT..
 [pull]
     rebase = false
 
+
+
+GLOBAL SSH CONFIG CONTENT..
+
+
+# Personal GitHub account (default)
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_personal
+  IdentitiesOnly yes
+
+# Work GitHub account
+Host github-brillo
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_brillo
+  IdentitiesOnly yes
+
+# Alias for pushing to personal repo, but using work key
+Host github-brillo-ikena
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_brillo
+    IdentitiesOnly yes
+
 [remote "brillo"]
         url = git@github-brillo-ikena:IkennaIsineyi/brillo-dev.git
         fetch = +refs/heads/*:refs/remotes/brillo/*
