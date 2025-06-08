@@ -17,3 +17,35 @@ Host github-brillo-ikena
 nano ~/.ssh/config
 
 nano .git/config 
+
+
+
+BRILLO EVAL CONTENT git CONFIG CONTENT..
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
+
+[remote "origin"]
+    url = git@github-brillo:BrilloConnetz/brillo-dev.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+    pushurl = git@github-brillo:BrilloConnetz/brillo-dev.git
+    pushurl = git@github-brillo-ikena:IkennaIsineyi/brillo-dev.git
+
+[branch "dev"]
+    remote = origin
+    merge = refs/heads/dev
+    vscode-merge-base = origin/dev
+
+[user]
+        name = UnekwuojoAbah
+        email = unekwuojo.abah@brilloconnetz.com
+
+[pull]
+    rebase = false
+
+[remote "brillo"]
+        url = git@github-brillo-ikena:IkennaIsineyi/brillo-dev.git
+        fetch = +refs/heads/*:refs/remotes/brillo/*
+
